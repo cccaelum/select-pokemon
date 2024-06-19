@@ -1,7 +1,5 @@
 const urlBase= "https://pokeapi.co/api/v2/pokemon/"; 
-const contenedor = document.querySelector(".container")
-const contenedor2 = document.querySelector(".container2")
-
+const fichaPokemon = document.querySelector(".fichaPokemon") 
 const getPokemonBtn = document.getElementById("get-pokemon"); 
 
 function obtenerPokemon (nombrePokemon){
@@ -27,15 +25,10 @@ fetch(urlBase + nombrePokemon)
   </ul>
   </div>
   `
-  contenedor2.innerHTML = template
-
-})
-}
-
+  fichaPokemon.innerHTML = template})}
 
 getPokemonBtn.addEventListener("click", ()=>{
     let valuePokemon = document.getElementById('pokemon-select').value
     obtenerPokemon(valuePokemon)
-
 })
 
